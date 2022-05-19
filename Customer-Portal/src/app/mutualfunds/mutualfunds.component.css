@@ -1,0 +1,65 @@
+.button {
+    display: inline-block;
+    padding: 6px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #47828f;
+    border: none;
+    border-radius: 8px;
+    /* box-shadow: 0 9px rgb(140, 179, 189); */
+
+    
+  }
+  
+.button:hover {background-color: #0b4e5e}
+
+.button:active {
+  background-color: #0a6a80;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.error
+{
+    color: red;
+    font-size: 14px;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border:1px solid red;
+ }
+ .form-control.ng-touched.ng-valid {
+  border:1px solid green;
+ }
+
+ 
+.header{
+  padding: 30px;
+  text-align: center;
+  background: #62a1af;
+  color: white;
+  font-size: 30px;
+  font-weight:800;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ 
+.header .underlined:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 7px;
+  width: 100%;
+  border: solid 2px #cb1829;
+  border-color: #fafafa transparent transparent transparent;
+  border-radius: 80%;
+}
+
+.underlined {
+  position: relative;
+  margin-right: 1rem;
+}

@@ -1,0 +1,144 @@
+<app-nav></app-nav>
+<p></p>
+<!-- 
+<p></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <table #dataTable class="display">
+        <thead>
+          <tr>
+            <th>Stock Id</th>
+            <th>Stock Name</th>
+            <th>Number of Shares</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stock of stocks">
+            <td>{{ stock.id }}</td>
+            <td>{{ stock.stockName }}</td>
+            <td>{{ stock.stockCount }}</td>
+            <td>
+              <button class="button" type="submit" (click)="open(content)">
+                Sell
+              </button>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+<div class="header ">
+  
+  <span class = "underlined after">Stock Holdings</span>
+
+</div>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="100%" *ngFor="let stock of stocks">
+      <mat-card class="mat-elevation-z8">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{stock.stockName}}</mat-card-title>
+            <mat-card-subtitle>Stock Details</mat-card-subtitle>
+          </mat-card-header>
+          
+
+          <mat-card-content>
+           <p>Stock ID: {{stock.id}}</p>
+           <p>Stock Name: {{stock.stockName}}</p>
+           <p>Stock Count: {{stock.stockCount}} Shares</p>
+           
+           <button class="button" type="submit" (click)="open(content)">
+            Sell
+          </button>
+           
+          </mat-card-content>
+          <mat-card-actions>
+            
+          </mat-card-actions>
+        </mat-card>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      Kindly confirm the asset details!
+    </h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form
+      #f="ngForm"
+      (ngSubmit)="onSubmit(portfolioId, stockName, stockCount, f)"
+      novalidate
+    >
+      <div class="form-group">
+        <label for="userId">Please confirm your user Id</label>
+        <div class="input-group">
+          <input
+            type="number"
+            id="id"
+            name="id"
+            class="form-control"
+            [(ngModel)]="portfolioId"
+          />
+        </div>
+        <p></p>
+        <label for="stockname">Asset Name</label>
+        <div class="input-group">
+          <input
+            type="text"
+            id="stockName"
+            name="stockName"
+            class="form-control"
+            [(ngModel)]="stockName"
+            required
+          />
+        </div>
+        <p></p>
+        <label for="stockcount"
+          >Enter the number of shares you wish to sell</label
+        >
+        <div class="input-group">
+          <input
+            type="number"
+            id="stockCount"
+            name="stockCount"
+            class="form-control"
+            [(ngModel)]="stockCount"
+          />
+        </div>
+        <p></p>
+        <div class="border-text-center">
+          <button
+            data-dismiss="modal"
+            class="buttonsubmit"
+            (click)="modal.close('Save click')"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Submit</button>
+  </div-->
+</ng-template>

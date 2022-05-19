@@ -1,0 +1,149 @@
+.button {
+    display: inline-block;
+    padding: 6px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #408392;
+    border: none;
+    border-radius: 8px;
+
+    
+}
+
+.buttonsubmit{
+  display: inline-block;
+    padding: 6px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #53b849;
+    border: none;
+    border-radius: 8px;
+
+}
+  
+.button:hover {background-color: #0b4e5e}
+
+.button:active {
+  background-color: #0a6a80;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h4{
+  margin-bottom: 0%;
+}
+
+/* form{
+  border: 1px solid maroon;
+  padding:2px;
+  width: 20%;
+  display: inline-block;
+} */
+
+.block {
+  float:right;
+  width:30%;
+  border: 1px dotted limegreen;
+}
+
+.error
+{
+  color: red;
+  font-size: 14px;
+}
+
+.card-top{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  min-width:0;
+  word-wrap: break-word;
+  background: #fff;
+  background-clip: border-box;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+}
+
+.item img{
+  width:64px;
+}
+
+.item{
+  margin:0px 15px;
+  text-align: center;
+
+
+}
+
+.item a hover{
+  color:blue;
+
+
+}
+
+.content{
+  padding: 16px;
+  
+ 
+}
+
+.content > mat-card{
+  
+  height:500px;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #579cac;
+  color: white;
+  font-size: 30px;
+  font-weight:800;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* #1abc9c; */
+
+.underlined {
+  position: relative;
+  margin-right: 1rem;
+}
+.header .underlined:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 7px;
+  width: 100%;
+  border: solid 2px #cb1829;
+  border-color: #fafafa transparent transparent transparent;
+  border-radius: 80%;
+}
+.small {
+  font-size: 60%;
+}
+.big {
+  font-size: 200%;
+}
+
+.text:after{
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 70px;
+  left: 5px;
+  top: 37px;
+  border-top: 2px solid red;
+  border-radius: 50%;
+}
+.text{
+font-family: "Comic Sans MS", cursive, sans-serif;
+color:red;
+}

@@ -1,0 +1,16 @@
+AuthorizationAPI/.vs/
+AuthorizationAPI/bin/
+AuthorizationAPI/obj/
+Customer-Portal/.vscode/
+Customer-Portal/node_modules/
+AutheticationAPITest/bin/
+AutheticationAPITest/obj/
+CalculateNetworth/.vs/
+CalculateNetworth/bin/
+CalculateNetworth/obj/
+DailyMutualFundNAV/.vs/
+DailyMutualFundNAV/bin/
+DailyMutualFundNAV/obj/
+DailySharePrice/.vs/
+DailySharePrice/bin/
+DailySharePrice/obj/

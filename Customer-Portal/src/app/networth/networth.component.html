@@ -1,0 +1,12 @@
+<app-nav></app-nav>
+<div class="card">
+    <div class="card-header">
+      Your Net Worth is
+    </div>
+    <div class="card-body">
+      <h1 class="card-title">{{amount|currency:'INR'}}</h1>
+      <p class="card-text">Your net worth is calculated based on the stocks and mutual funds you have on your portfolio.</p>
+      <a routerLink="/mutual-funds" class="btn btn-success">View Mutual Funds</a>&nbsp;&nbsp;
+      <a routerLink="/stocks" class="btn btn-success">View Stocks</a>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-05-16T09:41:08.8721705Z"
+    },
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2022-05-16T09:31:37.0987597Z"
+    }
+  },
+  "parameters": {
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "DailyMutualFundNAVResourceGroup"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "22c2f8df-f664-4a2e-9d64-1759722db92e"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "22c2f8df-f664-4a2e-9d64-1759722db92e"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "DailyMutualFundNAVResourceGroup"
+    }
+  }
+}

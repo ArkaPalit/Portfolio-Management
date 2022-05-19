@@ -1,0 +1,33 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dailysharepriceapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: DailySharePriceApi
+  template:
+    metadata:
+      labels:
+        app: DailySharePriceApi
+    spec:
+      containers:
+      - name: dailysharepriceapirepos
+        image: myportfoliomanagementcr.azurecr.io/dnrepos1:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: dsconfigsn
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dailysharepriceapi
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: DailySharePriceApi

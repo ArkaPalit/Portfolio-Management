@@ -1,0 +1,106 @@
+<app-nav></app-nav>
+ <p></p>
+ <!-- <div class="container-fluid">
+     <div class="row">
+         <div class="col-lg-12">
+             <table #dataTable class="display">
+                 <thead>
+                     <tr>
+                         <th>Id</th>
+                         <th>MutualFund Name</th>
+                         <th>Number of Units</th>
+                         <th>Actions</th>
+                         <th></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr *ngFor="let mutualFund of mutualFunds">
+                         <td>{{mutualFund.id}}</td>
+                         <td>{{mutualFund.mutualFundName}}</td>
+                         <td>{{mutualFund.mutualFundUnits}}</td>
+                         <td><button class="button" type="submit" (click)="open(content)">Sell</button></td>
+                         <td></td>
+                     </tr>
+                 </tbody>
+             </table>
+         </div>
+     </div>
+ </div> -->
+
+ <div class="header">
+  <span class = "underlined after">Mutual Funds</span>
+  
+</div>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="100%" *ngFor="let mutualFund of mutualFunds">
+      <mat-card class="mat-elevation-z8">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{mutualFund.stockName}}</mat-card-title>
+            <mat-card-subtitle>Stock Details</mat-card-subtitle>
+          </mat-card-header>
+          
+
+          <mat-card-content>
+           <p>Mutual Fund ID: {{mutualFund.id}}</p>
+           <p>Fund Name: {{mutualFund.mutualFundName}}</p>
+           <p>Units: {{mutualFund.mutualFundUnits}}</p>
+           
+           <button class="button" type="submit" (click)="open(content)">
+            Sell
+          </button>
+           
+          </mat-card-content>
+          <mat-card-actions>
+            
+          </mat-card-actions>
+        </mat-card>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Kindly confirm the asset details!</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+    
+      <form #sellmutualfundform="ngForm"  (ngSubmit)="onSubmit(portfolioId, mutualFundName, unitsToSell,sellmutualfundform)">
+        <div class="form-group">
+          <label for="userId">Please confirm your user Id</label>
+          <div class="input-group">
+            <input type = "number" id="id" name="id" class="form-control" [(ngModel)] = "portfolioId">
+          
+          </div>
+            <p></p>
+          <label for="mutualFundName">Asset Name</label>
+          <div class="input-group">
+            <input type = "text" id="mutualFundName" name = "mutualFundName" class="form-control" [(ngModel)] = "mutualFundName">
+          </div>
+          <p></p>
+          <label for="unitsToSell">Enter the number of units you wish to sell</label>
+          <div class="input-group">
+            <input type = "number" id="unitsToSell" name="unitsToSell" class="form-control"  [(ngModel)] = "unitsToSell">
+          </div>
+          <div class="border-text-center modal-footer" >
+            <button data-dismiss="modal" class="button" (click)="modal.close('Save click')" [disabled]="!sellmutualfundform.valid">Submit</button>
+          </div>
+        </div>
+      </form>
+    
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Submit</button>
+    </div> -->
+  </ng-template>
